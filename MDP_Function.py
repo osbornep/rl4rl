@@ -1,3 +1,5 @@
+# Function that takes inputs: [state,action,next_state] from a pandas dataframe column for each observation of a real life environment
+# Transforms these trajectory observations to an MDP where we comput P(s'|(s,a)) for (s,a)
 def MDP_fn(states,actions,next_states):
     import pandas as pd
     import numpy as np
