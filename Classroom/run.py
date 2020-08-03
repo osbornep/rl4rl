@@ -16,7 +16,7 @@ warnings.filterwarnings("ignore")
 
 # Import environment from env.py
 from env import action_outcome
-from env
+from env import environment
 
 
 # Figure Formatting
