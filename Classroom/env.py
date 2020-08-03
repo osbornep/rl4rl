@@ -5,13 +5,14 @@ sns.set_style("whitegrid", {'axes.grid' : False})
 
 #------------------------------------------------------------------------------------------
 
-states = ['A','B','C','D','E','F','G','T','M','recycling','trash']
+# Define states with 1) Labels, 2) Rewards and 3) [x,y] coordinates
+states = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'T', 'M', 'recycling', 'trash']
+rewards = [-0.04, -0.04, -0.04, -0.04, -0.04, -0.04, -0.04, -0.04, -0.04, 1, -1]
 x_list = [4,3,2,1,1,1,2,3,3,4,4]
 y_list = [1,1,1,1,2,3,3,3,2,3,2]
 
 # The low-level actions the agent can make in the environment
 actions = ['left','right','up','down']
-rewards = [-0.04,-0.04,-0.04,-0.04,-0.04,-0.04,-0.04,-0.04,-0.04,1,-1]
 
 
 #------------------------------------------------------------------------------------------
@@ -67,7 +68,7 @@ def action_outcome(state_x,state_y,action):
     return(u,v)
 
 def environment(state, action):
-    # Outcome probabilities
+    # Outcome probabilities as likelihood command is followed and random alternative otherwise
     if (state=='recycling')|(state=='trash'):
         prob = 0
     elif (state=='T'):
@@ -100,7 +101,8 @@ def environment(state, action):
     else:
         prob = "Error"
         print("Error state", state)
-
+        
+    # Simulate Outcome
     action_rng = np.random.rand()
     if action_rng<=prob:
         action = action
@@ -109,16 +111,21 @@ def environment(state, action):
         action_sub_list.remove(action)
         action = random.choice(action_sub_list)
         
-        
+    # Current state [x,y] coordinate
     state_x = x_list[states.index(state)]
     state_y = y_list[states.index(state)]
+    # [x,y] direction of movement given current state and probabilistic action outcome
     u = action_outcome(state_x,state_y,action)[0]
     v = action_outcome(state_x,state_y,action)[1]
+    # Next state [x,y]
     next_state_x = state_x + u
     next_state_y = state_y + v
+    
     # Returns index of x + y position to then find the state name
     next_state = states[' '.join(str(x_list[i])+ "_" + str(y_list[i]) for i in range(0,len(x_list))).split().index(str(next_state_x) + "_" + str(next_state_y))]
+    # Return immediate reward for next state
     reward = rewards[states.index(next_state)]
+    
     return(state, action, state_x, state_y, u, v, next_state, next_state_x, next_state_y, reward)
 
 #------------------------------------------------------------------------------------------
