@@ -6,9 +6,9 @@ We formalise the problem into an example classroom with rows of students and a t
 
 The teacher is the controller of the system and would like for the paper to be passed to him/her and placed into the recycling bin, not the general trash. More formally:
 
-    the paper should be passed along the class,
-    in as few steps as possible,
-    until it can be passed to the lecturer (controller) and will be placed in the bin.
+- the paper should be passed along the class,
+- in as few steps as possible,
+- until it can be passed to the lecturer (controller) and will be placed in the bin.
 
 We first show this as a real diagram and then how this can be formalised into a 'Grid World' example. In this example, students A and M are 'risky' individuals in that there is a chance that they attempt to throw the paper. As before, each student may pass or hold onto the paper (denoted by actions that go into a wall).
 
