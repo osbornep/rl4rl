@@ -16,6 +16,8 @@ warnings.filterwarnings("ignore")
 from env import action_outcome
 from env import environment
 
+# Import Q Learning function from Q_learning_fn.py
+from Q_learning_fn import Q_learning
 
 # Figure Formatting
 sns.set(rc={'figure.figsize':(15, 10)})
