@@ -14,7 +14,6 @@ warnings.filterwarnings("ignore")
 
 # Import environment from env.py
 from env import action_outcome
-from env import environment
 
 # Import Q Learning function from Q_learning_fn.py
 from Q_learning_fn import Q_learning
@@ -43,7 +42,7 @@ actions = ['left','right','up','down']
 start_state = None
 
 ## Parameters
-num_episodes = 500
+num_episodes = 5000
 epsilon = 0.2
 num_random_episodes = 50
 alpha = 0.2
@@ -68,7 +67,7 @@ print(Q_table.head())
 #------------------------------------------------------------------------------------------
 # Apply Q Learning Agent
 
-Mdl = Q_learning_v1(Q_table, start_state, num_episodes, epsilon, num_random_episodes, alpha, gamma)
+Mdl = Q_learning(states, actions, rewards, x_list, y_list, Q_table, start_state, num_episodes, epsilon, num_random_episodes, alpha, gamma)
 Q_table_output = Mdl[0]
 Q_table_tracker_output = Mdl[1]
 

@@ -1,4 +1,7 @@
 #------------------------------------------------------------------------------------------
+import pandas as pd
+import numpy as np
+import random
 
 def action_outcome(state_x,state_y,action):
     if action == 'left':
@@ -50,7 +53,7 @@ def action_outcome(state_x,state_y,action):
         v = 0
     return(u,v)
 
-def environment(state, action):
+def environment(states, actions, rewards, x_list, y_list, state, action):
     # Outcome probabilities as likelihood command is followed and random alternative otherwise
     if (state=='recycling')|(state=='trash'):
         prob = 0

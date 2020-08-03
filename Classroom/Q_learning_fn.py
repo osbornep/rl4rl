@@ -1,11 +1,18 @@
 #------------------------------------------------------------------------------------------
+import pandas as pd
+import numpy as np
+import random
+# Import environment from env.py
+from env import environment
+
+#------------------------------------------------------------------------------------------
 # Q LEARNING FUNCTION
 
-def Q_learning(Q_table, start_state, num_episodes, epsilon, num_random_episodes, alpha, gamma):
+def Q_learning(states, actions, rewards, x_list, y_list, Q_table, start_state, num_episodes, epsilon, num_random_episodes, alpha, gamma):
     Q_value_tracker = pd.DataFrame()
-    for episode in tqdm(range(0,num_episodes)):
-        # Track episode number with tqdm or can use simple print function
-        # print("Episodes Completed: ", np.round( (episode/num_episodes)*100,2),"%")
+    for episode in range(0,num_episodes):
+        # Track episode number with simple print function
+        print("Episodes Completed: ", np.round( (episode/num_episodes)*100,2),"%")
         
         # Add this so start state doesn't need to be given by user input
         if (start_state is None):
@@ -43,7 +50,7 @@ def Q_learning(Q_table, start_state, num_episodes, epsilon, num_random_episodes,
                 # Environment probabilistric outcome
                 #---
                 # environment fn output: return(state, action, state_x, state_y, u, v, next_state, next_state_x, next_state_y, reward)
-                outcome = environment(state, action)
+                outcome = environment(states, actions, rewards, x_list, y_list, state, action)
                 
                 new_state = outcome[6]
                 new_x = outcome[7]
