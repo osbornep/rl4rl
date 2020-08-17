@@ -35,6 +35,5 @@ For the specific number of episodes, the agent takes actions until a terminal st
 
 After each action, Q value is updated by:
 
-```math
-Q(s,a) \leftarrow (1-\alpha)Q(s,a) + \alpha(r + \gamma max_a Q(s',a)) 
-```
+$Q(s,a) \leftarrow (1-\alpha)Q(s,a) + \alpha(r + \gamma max_a Q(s',a))$
+
