@@ -28,6 +28,14 @@ The probabilities are defined by:
 - Other students have the probability of following the action set to 0.8 and 0.1 for every other action
 - The episode ends when the paper reaches the bin.
 
+
+### Running the Code
+
+To run the example agent, simply clone the repository and use:
+
+> python run.py
+
+
 TODO: UPDATE IMAGES WITH TRASH/RECYCLING AS GOALS
 
 ![Classroom_real](https://i.imgur.com/nOIUKlg.png "Classroom in Real-World")
