@@ -8,23 +8,31 @@ Script Files:
 
 
 
-### Q_learning_fn.py
+## Q_learning_fn.py
 
 Defines a simple Q learning agent.
 
-Inputs: 
+### Inputs: 
 
-1. Environment: 
+**Environment**: 
   - states - list of state names
   - actions - possible actions
   - rewards - reward function values
   - [x_list, y_list] - x,y position of states
   - Q_table - initialised Q values
   - start_state - specific start state if needed
-2. Parameters: 
+  
+**Parameters**: 
   - num_episodes - Number of episodes  
   - epsilon - Epsilon-greedy parameter
   - num_random_episodes - Fixed number of episodes to explore at start
   - alpha - Learning Rate parameter
   - gamma - Discount Rate parameter
 
+### Summary
+
+For the specific number of episodes, the agent takes actions until a terminal state is reached. Terminal states are 'trash' or 'recycling' and are fixed.
+
+After each action, Q value is updated by:
+
+$$Q(s,a) \leftarrow (1-\alpha)Q(s,a) + \alpha(r + \gamma max_a Q(s',a)) $$
