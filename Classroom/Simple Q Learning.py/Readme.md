@@ -29,6 +29,12 @@ The probabilities are defined by:
 - The episode ends when the paper reaches the bin.
 
 
+### Running the Code
+
+To run the example agent, simply clone the repository and use:
+
+> python run.py
+
 
 TODO: UPDATE IMAGES WITH TRASH/RECYCLING AS GOALS
 
