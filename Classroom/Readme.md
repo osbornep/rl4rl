@@ -35,3 +35,23 @@ TODO: UPDATE IMAGES WITH TRASH/RECYCLING AS GOALS
 ![Classroom_real](https://i.imgur.com/nOIUKlg.png "Classroom in Real-World")
 
 ![Classroom_grid](https://i.imgur.com/WeJnqs2.png "Classroom as Grid-World")
+
+
+## Part 1 - Define Env
+
+The first part defined the environment and creates the simulation. 
+
+The output is a function that produces the outcome and reward signal of actions given the current state. This is then produced into the env.py file that can be imported into later sections.
+
+## Part 2 - Model Based Policy Iteration
+
+Given we have access to the model via the simulation, we show how Policy Iteration can be applied. We show only 1 policy update and the effect of this as a basic introduction to model-based methods.
+
+## Part 3 - Online model Free Q Learning
+
+We now assume the agent has no access to the underlying model, as it normal, and apply a model-free method of Q learning. The agent learns via episodes by interacting directly with the simulation. 
+
+## Part 4 - Batch Offline Learning
+
+Lastly, we show the learning process if we assume that the environment cannot be interacted with constantly. Instead, data must be collected and learned from offline in batches. We show how the observed probabilities differ from the true probablities which happen to be known to us given we built the simulation and the challenge of large data requirements. 
+
