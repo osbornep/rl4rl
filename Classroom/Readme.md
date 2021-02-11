@@ -49,8 +49,6 @@ The probabilities are defined by:
 
 
 
-TODO: UPDATE IMAGES WITH TRASH/RECYCLING AS GOALS
-
 ![Classroom_real](https://i.imgur.com/nOIUKlg.png "Classroom in Real-World")
 
 ![Classroom_grid](https://i.imgur.com/WeJnqs2.png "Classroom as Grid-World")
