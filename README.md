@@ -6,6 +6,8 @@ This is the main page for Reinforcement Learning for Real Life (RL4RL).
 
 These Python Notebooks are designed to accompany our book published for Oxford's Department of Continuing Education.
 
+The Introduction to Reinforcement Learning presentation was part of a internal workshop that provides a complete summary of the basics of RL from Sutton's book. 
+
 ## Reinforcement Learning for Real-World Applications
 
 
