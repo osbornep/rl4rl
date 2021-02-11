@@ -1,7 +1,10 @@
 # rl4rl
+
+FEB 2021 RELEASE
+
 This is the main page for Reinforcement Learning for Real Life (RL4RL).
 
-These Python Notebooks are designed to accompany our book published for Oxford's Department of Continuing Education:
+These Python Notebooks are designed to accompany our book published for Oxford's Department of Continuing Education.
 
 ## Reinforcement Learning for Real-World Applications
 
