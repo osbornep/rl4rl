@@ -22,6 +22,6 @@ Please add comments to this repository and I will do my best to answer.
 
 Examples taken and compiled based on my prior work published on Medium and Kaggle:
 
-https://medium.com/@sterlingosborne
+https://medium.com/@philiposborne
 
 https://www.kaggle.com/osbornep
